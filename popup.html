@@ -1,0 +1,31 @@
+<style>
+    .hom-popUp-container {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        background-color: white;
+    }
+    .hom-popUp-title{
+        text-align: center;
+    }
+    .hom-popUp-input {
+        margin: 5px 0;
+    }
+    .hom-popUp-buttons {
+        text-align: center;
+    }
+</style>
+<div class="hom-popUp-container" ng-show="show">
+    <div class="hom-popUp-title">
+        Editing product
+    </div>
+    <div class="hom-popUp-input">
+        <input type="text" ng-model="editingProduct">
+    </div>
+    <div class="hom-popUp-buttons">
+        <button ng-click="show = false">Cancel</button>
+        <button ng-click="onSave({editingProductToReturn:editingProduct}); show = false">Save</button>
+    </div>
+</div>
